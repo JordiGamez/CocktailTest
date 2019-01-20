@@ -11,6 +11,8 @@ import Unbox
 
 class CTCategoriesList: NSObject, NSCoding, Unboxable {
     
+    // MARK: Private variables
+    
     private var drinksList: [CTCocktailCategory]?
     
     required init(unboxer: Unboxer) throws {

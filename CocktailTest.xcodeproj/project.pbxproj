@@ -22,6 +22,9 @@
 		19DDA6BC21A34B5C00E37750 /* CTAPICocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DDA6BB21A34B5C00E37750 /* CTAPICocktail.swift */; };
 		19DDA6BE21A34EFB00E37750 /* CTCocktailCategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DDA6BD21A34EFB00E37750 /* CTCocktailCategoriesModel.swift */; };
 		563928F785099CBCB9BEDFB0 /* Pods_CocktailTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0CF8132E680C33CD8956785 /* Pods_CocktailTest.framework */; };
+		C6FCEFAD21F474AE008FC0A1 /* Drink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6FCEFAB21F474AE008FC0A1 /* Drink.xcdatamodeld */; };
+		C6FCEFB121F47733008FC0A1 /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCEFB021F47733008FC0A1 /* LocalDataSource.swift */; };
+		C6FCEFB421F47992008FC0A1 /* LocalDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCEFB321F47992008FC0A1 /* LocalDataSourceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		19DDA6BB21A34B5C00E37750 /* CTAPICocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAPICocktail.swift; sourceTree = "<group>"; };
 		19DDA6BD21A34EFB00E37750 /* CTCocktailCategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTCocktailCategoriesModel.swift; sourceTree = "<group>"; };
 		3C7F5AB49281969FCF72E408 /* Pods-CocktailTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocktailTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CocktailTest/Pods-CocktailTest.release.xcconfig"; sourceTree = "<group>"; };
+		C6FCEFAC21F474AE008FC0A1 /* Drink.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Drink.xcdatamodel; sourceTree = "<group>"; };
+		C6FCEFB021F47733008FC0A1 /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
+		C6FCEFB321F47992008FC0A1 /* LocalDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSourceProtocol.swift; sourceTree = "<group>"; };
 		F0CF8132E680C33CD8956785 /* Pods_CocktailTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocktailTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -201,6 +207,7 @@
 		19DDA6C121A35FD400E37750 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				C6FCEFAE21F474C5008FC0A1 /* CoreData */,
 				19DDA6B421A3469E00E37750 /* CTCategoriesList.swift */,
 				1995CD6021A341B9006774F0 /* CTCocktailCategory.swift */,
 				19DDA6BD21A34EFB00E37750 /* CTCocktailCategoriesModel.swift */,
@@ -232,6 +239,32 @@
 				3C7F5AB49281969FCF72E408 /* Pods-CocktailTest.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C6FCEFAE21F474C5008FC0A1 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				C6FCEFAF21F47717008FC0A1 /* DataSource */,
+				C6FCEFAB21F474AE008FC0A1 /* Drink.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		C6FCEFAF21F47717008FC0A1 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				C6FCEFB221F4797C008FC0A1 /* Abstraction */,
+				C6FCEFB021F47733008FC0A1 /* LocalDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		C6FCEFB221F4797C008FC0A1 /* Abstraction */ = {
+			isa = PBXGroup;
+			children = (
+				C6FCEFB321F47992008FC0A1 /* LocalDataSourceProtocol.swift */,
+			);
+			path = Abstraction;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -414,9 +447,12 @@
 				19DDA6BE21A34EFB00E37750 /* CTCocktailCategoriesModel.swift in Sources */,
 				19DDA6BC21A34B5C00E37750 /* CTAPICocktail.swift in Sources */,
 				1995CD5421A33AEB006774F0 /* CTCocktailCategoriesViewController.swift in Sources */,
+				C6FCEFB421F47992008FC0A1 /* LocalDataSourceProtocol.swift in Sources */,
+				C6FCEFAD21F474AE008FC0A1 /* Drink.xcdatamodeld in Sources */,
 				1995CD6121A341B9006774F0 /* CTCocktailCategory.swift in Sources */,
 				19DDA6BA21A34AB000E37750 /* CTAPI.swift in Sources */,
 				19DDA6B521A3469E00E37750 /* CTCategoriesList.swift in Sources */,
+				C6FCEFB121F47733008FC0A1 /* LocalDataSource.swift in Sources */,
 				19DDA6B721A34A0B00E37750 /* CTConstants.swift in Sources */,
 				1995CD5C21A33E20006774F0 /* CTCocktailCategoriesView.swift in Sources */,
 			);
@@ -734,6 +770,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C6FCEFAB21F474AE008FC0A1 /* Drink.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C6FCEFAC21F474AE008FC0A1 /* Drink.xcdatamodel */,
+			);
+			currentVersion = C6FCEFAC21F474AE008FC0A1 /* Drink.xcdatamodel */;
+			path = Drink.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1995CD1921A33927006774F0 /* Project object */;
 }

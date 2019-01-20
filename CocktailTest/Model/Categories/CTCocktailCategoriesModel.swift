@@ -10,32 +10,38 @@ import Foundation
 
 class CTCocktailCategoriesModel: NSObject {
     
-    private var categeriesList: [CTCocktailCategory]
+    // MARK: Private variables
+    
+    private var localDataSource: LocalDataSourceProtocol?
+    
+    // MARK: Variables
+    
+    var categoriesList: [CTCocktailCategory]
     
     override init() {
-        self.categeriesList = [CTCocktailCategory]()
-        
+        self.categoriesList = [CTCocktailCategory]()
+        self.localDataSource = LocalDataSource()
         super.init()
     }
     
     func setCategoriesList(catList: [CTCocktailCategory]?) {
-        self.categeriesList.removeAll()
+        self.categoriesList.removeAll()
         if let list = catList {
             if list.count > 0 {
                 for category in orderCategoriesAlphabetically(list: list) {
-                    self.categeriesList.append(category)
+                    self.categoriesList.append(category)
                 }
             }
         }
     }
     
     func getCategoriesListCount() -> Int {
-        return self.categeriesList.count
+        return self.categoriesList.count
     }
     
     func getCategoryForIndex(_ index: Int) -> CTCocktailCategory? {
-        if self.categeriesList.count > 0 {
-            return self.categeriesList[index]
+        if self.categoriesList.count > 0 {
+            return self.categoriesList[index]
         }
         return nil
     }
@@ -45,6 +51,8 @@ class CTCocktailCategoriesModel: NSObject {
     /// - Parameter list: [CTCocktailCategory]
     /// - Returns: [CTCocktailCategory] ordered alphabetically
     func orderCategoriesAlphabetically(list: [CTCocktailCategory]) -> [CTCocktailCategory] {
-        return list.sorted(by: { $0.categoryStr < $1.categoryStr })
+        let orderedList = list.sorted(by: { $0.categoryStr < $1.categoryStr })
+        localDataSource?.saveCategories(categories: orderedList)
+        return orderedList
     }
 }

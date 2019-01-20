@@ -13,9 +13,11 @@ class CTCocktailCategoriesViewController: UIViewController, UITableViewDelegate,
     @IBOutlet weak var categoryView: CTCocktailCategoriesView!
     
     private var categoryModel: CTCocktailCategoriesModel
+    private var localDataSource: LocalDataSourceProtocol?
 
     init() {
         self.categoryModel = CTCocktailCategoriesModel()
+        self.localDataSource = LocalDataSource()
         super.init(nibName: "CTCocktailCategoriesViewController", bundle: nil)
     }
     
@@ -40,7 +42,7 @@ class CTCocktailCategoriesViewController: UIViewController, UITableViewDelegate,
         // Dispose of any resources that can be recreated.
     }
     
-    //MARK: -Private Funcs
+    // MARK: - Private methods
     
     private func setupController() {
         self.setupTable()
@@ -52,6 +54,11 @@ class CTCocktailCategoriesViewController: UIViewController, UITableViewDelegate,
     }
     
     private func getCocktailCategories() {
+        if let localCategories = localDataSource?.getCategories() {
+            categoryModel.setCategoriesList(catList: localCategories)
+            categoryView.categoriesTableView.reloadData()
+            return
+        }
         CTAPI.getCocktailCategories { [weak self] (success, failure) in
             if let this = self {
                 if let catList = success {
@@ -65,7 +72,7 @@ class CTCocktailCategoriesViewController: UIViewController, UITableViewDelegate,
         }
     }
     
-    //MARK: -UITableViewDataSource
+    // MARK: - UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.categoryModel.getCategoriesListCount()
@@ -77,5 +84,4 @@ class CTCocktailCategoriesViewController: UIViewController, UITableViewDelegate,
         
         return cell
     }
-
 }

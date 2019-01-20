@@ -35,6 +35,10 @@ class CTCocktailCategory: NSObject, NSCoding, Unboxable {
         self.categoryStr = aDecoder.decodeObject(forKey: key) as! String
     }
     
+    init(categoryStr: String) {
+        self.categoryStr = categoryStr
+    }
+    
     // MARK: Public methods
     
     func encode(with aCoder: NSCoder) {
