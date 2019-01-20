@@ -9,15 +9,26 @@
 import XCTest
 
 class CocktailTestUITests: XCTestCase {
-        
+    
+    // MARK: Constants
+    
+    let app = XCUIApplication()
+    
     override func setUp() {
         super.setUp()
 
         continueAfterFailure = false
-        XCUIApplication().launch()
+        app.launch()
     }
     
     override func tearDown() {
         super.tearDown()
+    }
+    
+    // MARK: Tests
+    
+    func testSelectBeerCategory() {
+        app.tables.staticTexts["Beer"].tap()
+        XCTAssertEqual(app.tables.staticTexts.count, 11)
     }
 }
