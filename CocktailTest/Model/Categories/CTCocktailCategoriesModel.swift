@@ -9,6 +9,7 @@
 import Foundation
 
 class CTCocktailCategoriesModel: NSObject {
+    
     private var categeriesList: [CTCocktailCategory]
     
     override init() {
@@ -21,7 +22,7 @@ class CTCocktailCategoriesModel: NSObject {
         self.categeriesList.removeAll()
         if let list = catList {
             if list.count > 0 {
-                for category in list {
+                for category in orderCategoriesAlphabetically(list: list) {
                     self.categeriesList.append(category)
                 }
             }
@@ -37,5 +38,13 @@ class CTCocktailCategoriesModel: NSObject {
             return self.categeriesList[index]
         }
         return nil
+    }
+    
+    /// Order the given categories list alphabetically
+    ///
+    /// - Parameter list: [CTCocktailCategory]
+    /// - Returns: [CTCocktailCategory] ordered alphabetically
+    func orderCategoriesAlphabetically(list: [CTCocktailCategory]) -> [CTCocktailCategory] {
+        return list.sorted(by: { $0.categoryStr < $1.categoryStr })
     }
 }

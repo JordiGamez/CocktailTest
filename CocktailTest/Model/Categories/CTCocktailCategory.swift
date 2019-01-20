@@ -13,8 +13,11 @@ class CTCocktailCategory: NSObject, NSCoding, Unboxable {
     
     // MARK: Private variables
     
-    private var categoryStr: String = ""
     private var key = "strCategory"
+    
+    // MARK: Variables
+    
+    var categoryStr: String = ""
     
     // MARK: Overriden methods
     
