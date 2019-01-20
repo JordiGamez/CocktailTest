@@ -10,6 +10,7 @@ import Foundation
 
 struct CTConstants {
     
+    /// API urls
     struct ApiUrls {
         static let API_ROOT = "https://www.thecocktaildb.com/api/json/v1/1/"
     }

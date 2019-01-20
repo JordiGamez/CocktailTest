@@ -10,22 +10,22 @@ import UIKit
 
 class CTCocktailCategoriesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    // MARK: - IBOutlets
+    // MARK: IBOutlets
     
     @IBOutlet weak var categoryView: CTCocktailCategoriesView!
     
-    // MARK: - Private constants
+    // MARK: Private constants
     
     private let screenTitle = "Categories"
     private let cellId = "cellId"
     private let customNibName = "CTCocktailCategoriesViewController"
     
-    // MARK: - Private variables
+    // MARK: Private variables
     
     private var categoryModel: CTCocktailCategoriesModel
     private var localDataSource: LocalDataSourceProtocol?
     
-    // MARK: - Initializers
+    // MARK: Initializers
     
     init() {
         self.categoryModel = CTCocktailCategoriesModel()
@@ -37,7 +37,7 @@ class CTCocktailCategoriesViewController: UIViewController, UITableViewDelegate,
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Lifecycle
+    // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +56,13 @@ class CTCocktailCategoriesViewController: UIViewController, UITableViewDelegate,
         super.didReceiveMemoryWarning()
     }
     
-    // MARK: - Private methods
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        get {
+            return .lightContent
+        }
+    }
+    
+    // MARK: Private methods
     
     private func setupController() {
         self.setupTable()
@@ -105,7 +111,7 @@ class CTCocktailCategoriesViewController: UIViewController, UITableViewDelegate,
         self.title = screenTitle
     }
 
-    // MARK: - UITableViewDataSource
+    // MARK: UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.categoryModel.getCategoriesListCount()
@@ -115,8 +121,10 @@ class CTCocktailCategoriesViewController: UIViewController, UITableViewDelegate,
         let cell = UITableViewCell(style: .default, reuseIdentifier: cellId)
         
         cell.textLabel?.text = self.categoryModel.getCategoryForIndex(indexPath.row)?.getCategory()
+        cell.textLabel?.textColor = .white
         cell.selectionStyle = .none
         cell.accessoryType = .disclosureIndicator
+        cell.backgroundColor = UIColor(rgb: Colors.background)
         
         return cell
     }

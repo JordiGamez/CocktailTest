@@ -12,10 +12,16 @@ class CTDrinkTableViewCell: UITableViewCell {
 
     // MARK: IBOutlets
     
-    @IBOutlet var view: UIView!
+    @IBOutlet var view: UIView! {
+        didSet {
+            view.backgroundColor = UIColor(rgb: Colors.background)
+        }
+    }
     @IBOutlet weak var nameLabel: UILabel! {
         didSet {
             nameLabel.numberOfLines = numberOfLines
+            nameLabel.textColor = .white
+            nameLabel.font = .systemFont(ofSize: 18.0, weight: UIFont.Weight.semibold)
         }
     }
     @IBOutlet weak var pictureImageView: UIImageView!
@@ -28,13 +34,10 @@ class CTDrinkTableViewCell: UITableViewCell {
         super.awakeFromNib()
         xibSetup()
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
     
     func xibSetup() {
         self.selectionStyle = .none
+        self.backgroundColor = UIColor(rgb: Colors.background)
         view.frame = bounds
         view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
         addSubview(view)

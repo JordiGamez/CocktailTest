@@ -12,13 +12,13 @@ import CoreData
 /// Responsible for accessing, saving and deleting the local data
 class LocalDataSource {
     
-    // MARK: - Private constants
+    // MARK: Private constants
     
     private let appDelegate = UIApplication.shared.delegate as! AppDelegate
     private let entityName = "Drink"
     private let fieldName = "strCategory"
     
-    // MARK: - Private methods
+    // MARK: Private methods
     
     /// Check if there is local data
     ///
@@ -63,7 +63,7 @@ class LocalDataSource {
     }
 }
 
-// MARK: - LocalDataSourceProtocol protocol conformance
+// MARK: LocalDataSourceProtocol protocol conformance
 
 extension LocalDataSource: LocalDataSourceProtocol {
     

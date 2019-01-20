@@ -21,13 +21,18 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbn-hQ-i0y" customClass="CTDrinksView" customModule="CocktailTest" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xbn-hQ-i0y" customClass="CTDrinksView" customModule="CocktailTest" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xbn-hQ-i0y" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="498-uN-hpe"/>
+                <constraint firstItem="xbn-hQ-i0y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="CZL-uK-3os"/>
+                <constraint firstAttribute="bottom" secondItem="xbn-hQ-i0y" secondAttribute="bottom" id="KfZ-3P-2C2"/>
+                <constraint firstItem="xbn-hQ-i0y" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="QUH-aa-W3N"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>
     </objects>

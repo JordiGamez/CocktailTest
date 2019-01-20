@@ -10,12 +10,24 @@ import UIKit
 
 class CTDrinksView: UIView {
     
-    // MARK: - IBOutlets
+    // MARK: IBOutlets
     
-    @IBOutlet var view: UIView!
-    @IBOutlet weak var drinksTableView: UITableView!
+    @IBOutlet var view: UIView! {
+        didSet {
+            view.backgroundColor = UIColor(rgb: Colors.background)
+        }
+    }
+    @IBOutlet weak var drinksTableView: UITableView! {
+        didSet {
+            drinksTableView.backgroundColor = UIColor(rgb: Colors.background)
+            drinksTableView.tableFooterView = UIView()
+            drinksTableView.rowHeight = UITableViewAutomaticDimension
+            drinksTableView.estimatedRowHeight = 100
+            drinksTableView.tableFooterView = UIView()
+        }
+    }
     
-    // MARK: - Initializers
+    // MARK: Initializers
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,9 +48,6 @@ class CTDrinksView: UIView {
         addSubview(view)
         
         drinksTableView.register(UINib(nibName: "CTDrinkTableViewCell", bundle: nil), forCellReuseIdentifier: "customCell")
-        drinksTableView.rowHeight = UITableViewAutomaticDimension
-        drinksTableView.estimatedRowHeight = 100
-        drinksTableView.tableFooterView = UIView()
     }
     
     func loadViewFromNib() -> UIView {

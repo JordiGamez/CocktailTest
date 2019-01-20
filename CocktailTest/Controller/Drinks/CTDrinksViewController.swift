@@ -11,25 +11,25 @@ import Kingfisher
 
 class CTDrinksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    // MARK: - IBOutlets
+    // MARK: IBOutlets
     
     @IBOutlet weak var drinksView: CTDrinksView!
     
-    // MARK: - Private constants
+    // MARK: Private constants
     
     private let cellId = "customCell"
     private let customNibName = "CTDrinksViewController"
     private let heightRow: CGFloat = 110.0
     
-    // MARK: - Private variables
+    // MARK: Private variables
     
     private var drinkModel: CTDrinksModel
     
-    // MARK: - Variables
+    // MARK: Variables
     
     var categoryName: String? = nil
     
-    // MARK: - Initializers
+    // MARK: Initializers
     
     init() {
         self.drinkModel = CTDrinksModel()
@@ -40,12 +40,13 @@ class CTDrinksViewController: UIViewController, UITableViewDelegate, UITableView
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Lifecycle
+    // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setupController()
+        self.navigationItem.largeTitleDisplayMode = .never
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -58,7 +59,7 @@ class CTDrinksViewController: UIViewController, UITableViewDelegate, UITableView
         super.didReceiveMemoryWarning()
     }
     
-    // MARK: - Private methods
+    // MARK: Private methods
     
     private func setupController() {
         self.setupTable()
@@ -98,7 +99,7 @@ class CTDrinksViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-    // MARK: - Public methods
+    // MARK: Public methods
     
     /// Set category
     ///
@@ -107,7 +108,7 @@ class CTDrinksViewController: UIViewController, UITableViewDelegate, UITableView
         self.categoryName = name
     }
     
-    // MARK: - UITableViewDataSource
+    // MARK: UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.drinkModel.getDrinksListCount()

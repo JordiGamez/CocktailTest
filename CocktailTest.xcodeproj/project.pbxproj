@@ -27,6 +27,10 @@
 		C69BE12E21F4CAA000638821 /* CTDrinksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C69BE12D21F4CAA000638821 /* CTDrinksViewController.xib */; };
 		C69BE13321F4CD9D00638821 /* CTDrinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69BE13121F4CD9D00638821 /* CTDrinkTableViewCell.swift */; };
 		C69BE13421F4CD9D00638821 /* CTDrinkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C69BE13221F4CD9D00638821 /* CTDrinkTableViewCell.xib */; };
+		C69BE13D21F4F63800638821 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69BE13C21F4F63800638821 /* Resources.swift */; };
+		C69BE14021F4F6B300638821 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69BE13F21F4F6B300638821 /* UIColorExtensions.swift */; };
+		C69BE14221F4F6C800638821 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69BE14121F4F6C800638821 /* Colors.swift */; };
+		C69BE14421F5083700638821 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C69BE14321F5083700638821 /* LaunchScreen.storyboard */; };
 		C6FCEFAD21F474AE008FC0A1 /* Drink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6FCEFAB21F474AE008FC0A1 /* Drink.xcdatamodeld */; };
 		C6FCEFB121F47733008FC0A1 /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCEFB021F47733008FC0A1 /* LocalDataSource.swift */; };
 		C6FCEFB421F47992008FC0A1 /* LocalDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCEFB321F47992008FC0A1 /* LocalDataSourceProtocol.swift */; };
@@ -88,6 +92,10 @@
 		C69BE12D21F4CAA000638821 /* CTDrinksViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTDrinksViewController.xib; sourceTree = "<group>"; };
 		C69BE13121F4CD9D00638821 /* CTDrinkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTDrinkTableViewCell.swift; sourceTree = "<group>"; };
 		C69BE13221F4CD9D00638821 /* CTDrinkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTDrinkTableViewCell.xib; sourceTree = "<group>"; };
+		C69BE13C21F4F63800638821 /* Resources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		C69BE13F21F4F6B300638821 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		C69BE14121F4F6C800638821 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		C69BE14321F5083700638821 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6FCEFAC21F474AE008FC0A1 /* Drink.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Drink.xcdatamodel; sourceTree = "<group>"; };
 		C6FCEFB021F47733008FC0A1 /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
 		C6FCEFB321F47992008FC0A1 /* LocalDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSourceProtocol.swift; sourceTree = "<group>"; };
@@ -159,6 +167,7 @@
 				1995CD5F21A33E49006774F0 /* View */,
 				1995CD5621A33AF1006774F0 /* Controller */,
 				19DDA6B821A34A7F00E37750 /* Utils */,
+				C69BE13E21F4F66700638821 /* Extensions */,
 				19DDA6C221A3601200E37750 /* Resource */,
 			);
 			path = CocktailTest;
@@ -251,8 +260,11 @@
 		19DDA6C221A3601200E37750 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				C69BE14321F5083700638821 /* LaunchScreen.storyboard */,
 				1995CD2B21A33928006774F0 /* Assets.xcassets */,
 				1995CD3021A33928006774F0 /* Info.plist */,
+				C69BE13C21F4F63800638821 /* Resources.swift */,
+				C69BE14121F4F6C800638821 /* Colors.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -278,6 +290,14 @@
 				1B64CF75B00D36AF7B088BDF /* Pods-CocktailTest-CocktailTestTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C69BE13E21F4F66700638821 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C69BE13F21F4F6B300638821 /* UIColorExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C6FCEFAE21F474C5008FC0A1 /* CoreData */ = {
@@ -449,6 +469,7 @@
 				1995CD2C21A33928006774F0 /* Assets.xcassets in Resources */,
 				1995CD5521A33AEB006774F0 /* CTCocktailCategoriesViewController.xib in Resources */,
 				C6FCEFB921F4914F008FC0A1 /* CTDrinksView.xib in Resources */,
+				C69BE14421F5083700638821 /* LaunchScreen.storyboard in Resources */,
 				1995CD5E21A33E3D006774F0 /* CTCocktailCategoriesView.xib in Resources */,
 				C69BE13421F4CD9D00638821 /* CTDrinkTableViewCell.xib in Resources */,
 			);
@@ -567,6 +588,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1995CD2521A33927006774F0 /* AppDelegate.swift in Sources */,
+				C69BE14221F4F6C800638821 /* Colors.swift in Sources */,
 				19DDA6BE21A34EFB00E37750 /* CTCocktailCategoriesModel.swift in Sources */,
 				C6FCEFCB21F49B81008FC0A1 /* CTDrinksList.swift in Sources */,
 				C69BE13321F4CD9D00638821 /* CTDrinkTableViewCell.swift in Sources */,
@@ -579,7 +601,9 @@
 				C6FCEFAD21F474AE008FC0A1 /* Drink.xcdatamodeld in Sources */,
 				1995CD6121A341B9006774F0 /* CTCocktailCategory.swift in Sources */,
 				19DDA6BA21A34AB000E37750 /* CTAPI.swift in Sources */,
+				C69BE13D21F4F63800638821 /* Resources.swift in Sources */,
 				19DDA6B521A3469E00E37750 /* CTCategoriesList.swift in Sources */,
+				C69BE14021F4F6B300638821 /* UIColorExtensions.swift in Sources */,
 				C6FCEFC021F492A9008FC0A1 /* CTDrinksViewController.swift in Sources */,
 				C6FCEFB121F47733008FC0A1 /* LocalDataSource.swift in Sources */,
 				C6FCEFC521F49851008FC0A1 /* CTDrinkCategory.swift in Sources */,
@@ -739,7 +763,6 @@
 			baseConfigurationReference = 08F87699C3361C8EA5970E5E /* Pods-CocktailTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2GF85C9B94;
@@ -761,7 +784,6 @@
 			baseConfigurationReference = 3C7F5AB49281969FCF72E408 /* Pods-CocktailTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2GF85C9B94;

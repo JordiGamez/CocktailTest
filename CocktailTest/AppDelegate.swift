@@ -12,18 +12,31 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    // MARK: - Private constants
+    // MARK: Private constants
     
     private let entityName = "Drink"
     
-    // MARK: - Variables
+    // MARK: Variables
     
     var window: UIWindow?
 
+    // MARK: Private methods
+    
+    private func customizeNavigationBar(navigationController: UINavigationController) {
+        navigationController.navigationBar.prefersLargeTitles = true
+        navigationController.navigationBar.barTintColor = UIColor(rgb: Colors.background)
+        navigationController.navigationBar.tintColor = .white
+        navigationController.navigationBar.largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
+    }
+    
+    // MARK: Public methods
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         let cocktailCategoriesVC = CTCocktailCategoriesViewController()
         let navigationController = UINavigationController()
+        customizeNavigationBar(navigationController: navigationController)
         navigationController.viewControllers = [cocktailCategoriesVC]
         
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -57,7 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
     }
     
-    // MARK: - Core Data stack
+    // MARK: Core Data stack
     
     lazy var persistentContainer: NSPersistentContainer = {
         /*
@@ -86,7 +99,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return container
     }()
     
-    // MARK: - Core Data Saving support
+    // MARK: Core Data saving support
     
     func saveContext () {
         let context = persistentContainer.viewContext

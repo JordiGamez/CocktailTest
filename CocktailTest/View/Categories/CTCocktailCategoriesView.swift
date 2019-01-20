@@ -10,20 +10,29 @@ import UIKit
 
 class CTCocktailCategoriesView: UIView {
 
-    // MARK: - IBOutlets
+    // MARK: IBOutlets
     
-    @IBOutlet var view: UIView!
-    @IBOutlet weak var categoriesTableView: UITableView!
+    @IBOutlet var view: UIView! {
+        didSet {
+            view.backgroundColor = UIColor(rgb: Colors.background)
+        }
+    }
+    @IBOutlet weak var categoriesTableView: UITableView! {
+        didSet {
+            categoriesTableView.backgroundColor = UIColor(rgb: Colors.background)
+            categoriesTableView.tableFooterView = UIView()
+        }
+    }
     
-    // MARK: - Private constants
+    // MARK: Private constants
     
     private let refreshControl = UIRefreshControl()
     
-    // MARK: - Variables
+    // MARK: Variables
     
     var reloadTableCallback: (() -> Void)?
     
-    // MARK: - Initializers
+    // MARK: Initializers
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,7 +51,7 @@ class CTCocktailCategoriesView: UIView {
         view.frame = bounds
         view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
         addSubview(view)
-        categoriesTableView.tableFooterView = UIView()
+        
         addRefreshControl()
     }
     
@@ -62,7 +71,7 @@ class CTCocktailCategoriesView: UIView {
     
     /// Call the callback is pull to refresh is triggered
     ///
-    /// - Parameter sender: <#sender description#>
+    /// - Parameter sender: Any
     @objc private func reloadTableView(_ sender: Any) {
         if let callback = reloadTableCallback {
             callback()

@@ -21,13 +21,18 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7WZ-Ae-QtG">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7WZ-Ae-QtG">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="7WZ-Ae-QtG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="RDH-2b-ARD"/>
+                <constraint firstItem="7WZ-Ae-QtG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Zy8-Wd-4WD"/>
+                <constraint firstItem="7WZ-Ae-QtG" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="e7j-uM-uKk"/>
+                <constraint firstAttribute="bottom" secondItem="7WZ-Ae-QtG" secondAttribute="bottom" id="tBG-ND-nbC"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>
     </objects>
