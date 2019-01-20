@@ -11,22 +11,31 @@ import Unbox
 
 class CTCocktailCategory: NSObject, NSCoding, Unboxable {
     
+    // MARK: Private variables
+    
     private var categoryStr: String = ""
+    private var key = "strCategory"
+    
+    // MARK: Overriden methods
     
     override var description: String {
         return "[\(categoryStr)]"
     }
     
+    // MARK: Initializers
+    
     required init(unboxer: Unboxer) throws {
-        self.categoryStr = try unboxer.unbox(key: "strcategory")
+        self.categoryStr = try unboxer.unbox(key: key)
     }
     
     required init?(coder aDecoder: NSCoder) {
-        self.categoryStr = aDecoder.decodeObject(forKey: "strcategory") as! String
+        self.categoryStr = aDecoder.decodeObject(forKey: key) as! String
     }
     
+    // MARK: Public methods
+    
     func encode(with aCoder: NSCoder) {
-        aCoder.encode(self.categoryStr, forKey: "strcategory")
+        aCoder.encode(self.categoryStr, forKey: key)
     }
     
     func getCategory() -> String {
