@@ -9,6 +9,9 @@
 import Foundation
 
 struct CTDrink {
+    
+    // MARK: Variables
+    
     var name: String
     var image: String
 }

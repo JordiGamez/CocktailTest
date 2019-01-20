@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Store the app colors in hexadecimal
 enum Resources {
     
     enum Color {

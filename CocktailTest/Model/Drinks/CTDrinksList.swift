@@ -19,6 +19,8 @@ class CTDrinksList: NSObject, NSCoding, Unboxable {
     
     private var drinksList: [CTDrinkCategory]?
     
+    // MARK: Initializers
+    
     required init(unboxer: Unboxer) throws {
         self.drinksList = unboxer.unbox(key: key)
     }
@@ -26,6 +28,8 @@ class CTDrinksList: NSObject, NSCoding, Unboxable {
     required init?(coder aDecoder: NSCoder) {
         self.drinksList = aDecoder.decodeObject(forKey: key) as? [CTDrinkCategory]
     }
+    
+    // MARK: Public methods
     
     func encode(with aCoder: NSCoder) {
         aCoder.encode(self.drinksList, forKey: key)

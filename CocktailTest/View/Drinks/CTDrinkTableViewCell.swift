@@ -30,12 +30,16 @@ class CTDrinkTableViewCell: UITableViewCell {
     
     private let numberOfLines = 0
     
+    // MARK: Overriden methods
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         xibSetup()
     }
     
-    func xibSetup() {
+    // MARK: Private constants
+    
+    private func xibSetup() {
         self.selectionStyle = .none
         self.backgroundColor = UIColor(rgb: Colors.background)
         view.frame = bounds

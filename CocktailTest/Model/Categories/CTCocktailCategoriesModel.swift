@@ -18,11 +18,15 @@ class CTCocktailCategoriesModel: NSObject {
     
     var categoriesList: [CTCocktailCategory]
     
+    // MARK: Initializers
+    
     override init() {
         self.categoriesList = [CTCocktailCategory]()
         self.localDataSource = LocalDataSource()
         super.init()
     }
+    
+    // MARK: Public methods
     
     func setCategoriesList(catList: [CTCocktailCategory]?) {
         self.categoriesList.removeAll()

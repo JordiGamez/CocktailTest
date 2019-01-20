@@ -56,24 +56,21 @@ class CTCocktailCategoriesViewController: UIViewController, UITableViewDelegate,
         super.didReceiveMemoryWarning()
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        get {
-            return .lightContent
-        }
-    }
-    
     // MARK: Private methods
     
+    /// Setup the controller
     private func setupController() {
         self.setupTable()
         setTitle()
     }
     
+    /// Setup the table delegate and data source
     private func setupTable() {
         self.categoryView.categoriesTableView.delegate = self
         self.categoryView.categoriesTableView.dataSource = self
     }
     
+    /// Get categories
     private func getCocktailCategories() {
         if let localCategories = localDataSource?.getCategories() {
             categoryModel.setCategoriesList(catList: localCategories)
@@ -121,6 +118,7 @@ class CTCocktailCategoriesViewController: UIViewController, UITableViewDelegate,
         let cell = UITableViewCell(style: .default, reuseIdentifier: cellId)
         
         cell.textLabel?.text = self.categoryModel.getCategoryForIndex(indexPath.row)?.getCategory()
+        
         cell.textLabel?.textColor = .white
         cell.selectionStyle = .none
         cell.accessoryType = .disclosureIndicator

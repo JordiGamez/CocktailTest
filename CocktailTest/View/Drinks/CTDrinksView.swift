@@ -41,7 +41,9 @@ class CTDrinksView: UIView {
         xibSetup()
     }
     
-    func xibSetup() {
+    // MARK: Private methods
+    
+    private func xibSetup() {
         view = loadViewFromNib()
         view.frame = bounds
         view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
@@ -50,7 +52,7 @@ class CTDrinksView: UIView {
         drinksTableView.register(UINib(nibName: "CTDrinkTableViewCell", bundle: nil), forCellReuseIdentifier: "customCell")
     }
     
-    func loadViewFromNib() -> UIView {
+    private func loadViewFromNib() -> UIView {
         let nibName = String(describing: type(of: self)).components(separatedBy: "__").last!
         let nib = UINib(nibName: nibName, bundle: Bundle(for: type(of: self)))
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView

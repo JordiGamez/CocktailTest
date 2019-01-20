@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Store the colors of the different UI elements
 enum Colors {
     
     static let background                       = Resources.Color.black

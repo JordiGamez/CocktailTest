@@ -22,7 +22,6 @@
 		19DDA6BC21A34B5C00E37750 /* CTAPICocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DDA6BB21A34B5C00E37750 /* CTAPICocktail.swift */; };
 		19DDA6BE21A34EFB00E37750 /* CTCocktailCategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DDA6BD21A34EFB00E37750 /* CTCocktailCategoriesModel.swift */; };
 		563928F785099CBCB9BEDFB0 /* Pods_CocktailTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0CF8132E680C33CD8956785 /* Pods_CocktailTest.framework */; };
-		812631D02F9D85160B17DA82 /* Pods_CocktailTest_CocktailTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 351C2515A1A0A1090CA4E9E1 /* Pods_CocktailTest_CocktailTestTests.framework */; };
 		87C63B8AED4CD079E459DFEF /* Pods_CocktailTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7927B0C4C59E72B10A6742B5 /* Pods_CocktailTestTests.framework */; };
 		C69BE12E21F4CAA000638821 /* CTDrinksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C69BE12D21F4CAA000638821 /* CTDrinksViewController.xib */; };
 		C69BE13321F4CD9D00638821 /* CTDrinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69BE13121F4CD9D00638821 /* CTDrinkTableViewCell.swift */; };
@@ -63,7 +62,6 @@
 /* Begin PBXFileReference section */
 		058327ACBE8D971557F17AF2 /* Pods-CocktailTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocktailTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CocktailTestTests/Pods-CocktailTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		08F87699C3361C8EA5970E5E /* Pods-CocktailTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocktailTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CocktailTest/Pods-CocktailTest.debug.xcconfig"; sourceTree = "<group>"; };
-		18CD2F2A55426E43D6034E6F /* Pods-CocktailTest-CocktailTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocktailTest-CocktailTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CocktailTest-CocktailTestTests/Pods-CocktailTest-CocktailTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1995CD2121A33927006774F0 /* CocktailTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1995CD2421A33927006774F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1995CD2B21A33928006774F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,8 +82,6 @@
 		19DDA6B921A34AB000E37750 /* CTAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAPI.swift; sourceTree = "<group>"; };
 		19DDA6BB21A34B5C00E37750 /* CTAPICocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAPICocktail.swift; sourceTree = "<group>"; };
 		19DDA6BD21A34EFB00E37750 /* CTCocktailCategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTCocktailCategoriesModel.swift; sourceTree = "<group>"; };
-		1B64CF75B00D36AF7B088BDF /* Pods-CocktailTest-CocktailTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocktailTest-CocktailTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CocktailTest-CocktailTestTests/Pods-CocktailTest-CocktailTestTests.release.xcconfig"; sourceTree = "<group>"; };
-		351C2515A1A0A1090CA4E9E1 /* Pods_CocktailTest_CocktailTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocktailTest_CocktailTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C7F5AB49281969FCF72E408 /* Pods-CocktailTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocktailTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CocktailTest/Pods-CocktailTest.release.xcconfig"; sourceTree = "<group>"; };
 		7927B0C4C59E72B10A6742B5 /* Pods_CocktailTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocktailTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0BC5D150BFF3648243D9519 /* Pods-CocktailTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocktailTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CocktailTestTests/Pods-CocktailTestTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -123,7 +119,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				87C63B8AED4CD079E459DFEF /* Pods_CocktailTestTests.framework in Frameworks */,
-				812631D02F9D85160B17DA82 /* Pods_CocktailTest_CocktailTestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +269,6 @@
 			children = (
 				F0CF8132E680C33CD8956785 /* Pods_CocktailTest.framework */,
 				7927B0C4C59E72B10A6742B5 /* Pods_CocktailTestTests.framework */,
-				351C2515A1A0A1090CA4E9E1 /* Pods_CocktailTest_CocktailTestTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -286,8 +280,6 @@
 				3C7F5AB49281969FCF72E408 /* Pods-CocktailTest.release.xcconfig */,
 				058327ACBE8D971557F17AF2 /* Pods-CocktailTestTests.debug.xcconfig */,
 				A0BC5D150BFF3648243D9519 /* Pods-CocktailTestTests.release.xcconfig */,
-				18CD2F2A55426E43D6034E6F /* Pods-CocktailTest-CocktailTestTests.debug.xcconfig */,
-				1B64CF75B00D36AF7B088BDF /* Pods-CocktailTest-CocktailTestTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
