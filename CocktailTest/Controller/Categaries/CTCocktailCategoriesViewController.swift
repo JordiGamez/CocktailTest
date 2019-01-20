@@ -10,25 +10,39 @@ import UIKit
 
 class CTCocktailCategoriesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    // MARK: - IBOutlets
+    
     @IBOutlet weak var categoryView: CTCocktailCategoriesView!
+    
+    // MARK: - Private constants
+    
+    private let cellId = "cellId"
+    private let customNibName = "CTCocktailCategoriesViewController"
+    
+    // MARK: - Private variables
     
     private var categoryModel: CTCocktailCategoriesModel
     private var localDataSource: LocalDataSourceProtocol?
-
+    
+    // MARK: - Initializers
+    
     init() {
         self.categoryModel = CTCocktailCategoriesModel()
         self.localDataSource = LocalDataSource()
-        super.init(nibName: "CTCocktailCategoriesViewController", bundle: nil)
+        super.init(nibName: customNibName, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.setupController()
+        listenForPullToRefresh()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -39,7 +53,6 @@ class CTCocktailCategoriesViewController: UIViewController, UITableViewDelegate,
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // MARK: - Private methods
@@ -59,8 +72,14 @@ class CTCocktailCategoriesViewController: UIViewController, UITableViewDelegate,
             categoryView.categoriesTableView.reloadData()
             return
         }
+        getCocktailCategoriesFromAPI()
+    }
+    
+    /// Get categories from API
+    private func getCocktailCategoriesFromAPI () {
         CTAPI.getCocktailCategories { [weak self] (success, failure) in
             if let this = self {
+                this.categoryView.stopRefreshAnimation()
                 if let catList = success {
                     this.categoryModel.setCategoriesList(catList: catList.getCategoriesList())
                     this.categoryView.categoriesTableView.reloadData()
@@ -72,6 +91,13 @@ class CTCocktailCategoriesViewController: UIViewController, UITableViewDelegate,
         }
     }
     
+    /// Listen for pull to refresh TableView
+    private func listenForPullToRefresh() {
+        categoryView.reloadTableCallback = {
+            self.getCocktailCategoriesFromAPI()
+        }
+    }
+    
     // MARK: - UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -79,7 +105,7 @@ class CTCocktailCategoriesViewController: UIViewController, UITableViewDelegate,
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cellId")
+        let cell = UITableViewCell(style: .default, reuseIdentifier: cellId)
         cell.textLabel?.text = self.categoryModel.getCategoryForIndex(indexPath.row)?.getCategory()
         
         return cell
