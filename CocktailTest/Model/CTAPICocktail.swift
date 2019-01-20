@@ -10,6 +10,7 @@ import Alamofire
 import Unbox
 
 extension CTAPI {
+    
     static func getCocktailCategories(_ completion: @escaping (_ response: CTCategoriesList?, _ error: NSError?) -> Void) {
         Alamofire.request(apiHsot() + "list.php", method: .get, parameters: ["c":"list"], encoding: URLEncoding.default, headers: nil).validate().responseJSON { (response) in
             switch response.result {
