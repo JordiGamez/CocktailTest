@@ -42,7 +42,7 @@ class CTCocktailCategoriesView: UIView {
         view.frame = bounds
         view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
         addSubview(view)
-        
+        categoriesTableView.tableFooterView = UIView()
         addRefreshControl()
     }
     

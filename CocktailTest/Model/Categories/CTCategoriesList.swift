@@ -11,23 +11,27 @@ import Unbox
 
 class CTCategoriesList: NSObject, NSCoding, Unboxable {
     
+    // MARK: Private constants
+    
+    private let key = "drinks"
+    
     // MARK: Private variables
     
-    private var drinksList: [CTCocktailCategory]?
+    private var categoriesList: [CTCocktailCategory]?
     
     required init(unboxer: Unboxer) throws {
-        self.drinksList = unboxer.unbox(key: "drinks")
+        self.categoriesList = unboxer.unbox(key: key)
     }
     
     required init?(coder aDecoder: NSCoder) {
-        self.drinksList = aDecoder.decodeObject(forKey: "drinks") as? [CTCocktailCategory]
+        self.categoriesList = aDecoder.decodeObject(forKey: key) as? [CTCocktailCategory]
     }
     
     func encode(with aCoder: NSCoder) {
-        aCoder.encode(self.drinksList, forKey: "drinks")
+        aCoder.encode(self.categoriesList, forKey: key)
     }
     
     func getCategoriesList() -> [CTCocktailCategory]? {
-        return drinksList
+        return categoriesList
     }
 }

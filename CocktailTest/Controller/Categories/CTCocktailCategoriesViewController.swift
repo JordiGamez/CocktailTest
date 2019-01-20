@@ -16,6 +16,7 @@ class CTCocktailCategoriesViewController: UIViewController, UITableViewDelegate,
     
     // MARK: - Private constants
     
+    private let screenTitle = "Categories"
     private let cellId = "cellId"
     private let customNibName = "CTCocktailCategoriesViewController"
     
@@ -59,6 +60,7 @@ class CTCocktailCategoriesViewController: UIViewController, UITableViewDelegate,
     
     private func setupController() {
         self.setupTable()
+        setTitle()
     }
     
     private func setupTable() {
@@ -98,6 +100,11 @@ class CTCocktailCategoriesViewController: UIViewController, UITableViewDelegate,
         }
     }
     
+    /// Set view title
+    private func setTitle() {
+        self.title = screenTitle
+    }
+
     // MARK: - UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -106,8 +113,19 @@ class CTCocktailCategoriesViewController: UIViewController, UITableViewDelegate,
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: cellId)
+        
         cell.textLabel?.text = self.categoryModel.getCategoryForIndex(indexPath.row)?.getCategory()
+        cell.selectionStyle = .none
+        cell.accessoryType = .disclosureIndicator
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let selectedCategory = self.categoryModel.getCategoryForIndex(indexPath.row)?.getCategory() {
+            let drinksViewController = CTDrinksViewController()
+            drinksViewController.setCocktailCategory(name: selectedCategory)
+            self.navigationController?.pushViewController(drinksViewController, animated: true)
+        }
     }
 }

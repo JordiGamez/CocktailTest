@@ -16,14 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private let entityName = "Drink"
     
+    // MARK: - Variables
+    
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         let cocktailCategoriesVC = CTCocktailCategoriesViewController()
+        let navigationController = UINavigationController()
+        navigationController.viewControllers = [cocktailCategoriesVC]
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = cocktailCategoriesVC
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         
         return true

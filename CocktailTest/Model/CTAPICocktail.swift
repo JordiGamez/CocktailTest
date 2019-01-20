@@ -30,4 +30,30 @@ extension CTAPI {
             }
         }
     }
+    
+    /// Get drinks list by category name
+    ///
+    /// - Parameters:
+    ///   - name: Category name
+    ///   - completion: Callback
+    static func getDrinksByCategory(name: String, _ completion: @escaping (_ response: CTDrinksList?, _ error: NSError?) -> Void) {
+        Alamofire.request(apiHsot() + "filter.php", method: .get, parameters: ["c": name], encoding: URLEncoding.default, headers: nil).validate().responseJSON { (response) in
+            switch response.result {
+            case .success(let data):
+                do {
+                    if data is NSNull {
+                        completion(nil, nil)
+                    }
+                    else {
+                        let drinksList: CTDrinksList = try unbox(dictionary: data as! UnboxableDictionary)
+                        completion(drinksList, nil)
+                    }
+                } catch {
+                    completion(nil, NSError())
+                }
+            case .failure(let error):
+                completion(nil, error as NSError)
+            }
+        }
+    }
 }

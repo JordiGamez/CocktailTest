@@ -22,9 +22,19 @@
 		19DDA6BC21A34B5C00E37750 /* CTAPICocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DDA6BB21A34B5C00E37750 /* CTAPICocktail.swift */; };
 		19DDA6BE21A34EFB00E37750 /* CTCocktailCategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DDA6BD21A34EFB00E37750 /* CTCocktailCategoriesModel.swift */; };
 		563928F785099CBCB9BEDFB0 /* Pods_CocktailTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0CF8132E680C33CD8956785 /* Pods_CocktailTest.framework */; };
+		C69BE12E21F4CAA000638821 /* CTDrinksViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C69BE12D21F4CAA000638821 /* CTDrinksViewController.xib */; };
+		C69BE13321F4CD9D00638821 /* CTDrinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69BE13121F4CD9D00638821 /* CTDrinkTableViewCell.swift */; };
+		C69BE13421F4CD9D00638821 /* CTDrinkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C69BE13221F4CD9D00638821 /* CTDrinkTableViewCell.xib */; };
 		C6FCEFAD21F474AE008FC0A1 /* Drink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C6FCEFAB21F474AE008FC0A1 /* Drink.xcdatamodeld */; };
 		C6FCEFB121F47733008FC0A1 /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCEFB021F47733008FC0A1 /* LocalDataSource.swift */; };
 		C6FCEFB421F47992008FC0A1 /* LocalDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCEFB321F47992008FC0A1 /* LocalDataSourceProtocol.swift */; };
+		C6FCEFB921F4914F008FC0A1 /* CTDrinksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6FCEFB821F4914F008FC0A1 /* CTDrinksView.xib */; };
+		C6FCEFBB21F49162008FC0A1 /* CTDrinksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCEFBA21F49162008FC0A1 /* CTDrinksView.swift */; };
+		C6FCEFC021F492A9008FC0A1 /* CTDrinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCEFBF21F492A9008FC0A1 /* CTDrinksViewController.swift */; };
+		C6FCEFC321F497E3008FC0A1 /* CTDrinksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCEFC221F497E3008FC0A1 /* CTDrinksModel.swift */; };
+		C6FCEFC521F49851008FC0A1 /* CTDrinkCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCEFC421F49851008FC0A1 /* CTDrinkCategory.swift */; };
+		C6FCEFC921F49A24008FC0A1 /* CTDrink.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCEFC821F49A24008FC0A1 /* CTDrink.swift */; };
+		C6FCEFCB21F49B81008FC0A1 /* CTDrinksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6FCEFCA21F49B81008FC0A1 /* CTDrinksList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,9 +77,19 @@
 		19DDA6BB21A34B5C00E37750 /* CTAPICocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTAPICocktail.swift; sourceTree = "<group>"; };
 		19DDA6BD21A34EFB00E37750 /* CTCocktailCategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTCocktailCategoriesModel.swift; sourceTree = "<group>"; };
 		3C7F5AB49281969FCF72E408 /* Pods-CocktailTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocktailTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CocktailTest/Pods-CocktailTest.release.xcconfig"; sourceTree = "<group>"; };
+		C69BE12D21F4CAA000638821 /* CTDrinksViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTDrinksViewController.xib; sourceTree = "<group>"; };
+		C69BE13121F4CD9D00638821 /* CTDrinkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTDrinkTableViewCell.swift; sourceTree = "<group>"; };
+		C69BE13221F4CD9D00638821 /* CTDrinkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTDrinkTableViewCell.xib; sourceTree = "<group>"; };
 		C6FCEFAC21F474AE008FC0A1 /* Drink.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Drink.xcdatamodel; sourceTree = "<group>"; };
 		C6FCEFB021F47733008FC0A1 /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
 		C6FCEFB321F47992008FC0A1 /* LocalDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSourceProtocol.swift; sourceTree = "<group>"; };
+		C6FCEFB821F4914F008FC0A1 /* CTDrinksView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CTDrinksView.xib; sourceTree = "<group>"; };
+		C6FCEFBA21F49162008FC0A1 /* CTDrinksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTDrinksView.swift; sourceTree = "<group>"; };
+		C6FCEFBF21F492A9008FC0A1 /* CTDrinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTDrinksViewController.swift; sourceTree = "<group>"; };
+		C6FCEFC221F497E3008FC0A1 /* CTDrinksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTDrinksModel.swift; sourceTree = "<group>"; };
+		C6FCEFC421F49851008FC0A1 /* CTDrinkCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTDrinkCategory.swift; sourceTree = "<group>"; };
+		C6FCEFC821F49A24008FC0A1 /* CTDrink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTDrink.swift; sourceTree = "<group>"; };
+		C6FCEFCA21F49B81008FC0A1 /* CTDrinksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTDrinksList.swift; sourceTree = "<group>"; };
 		F0CF8132E680C33CD8956785 /* Pods_CocktailTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocktailTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -155,7 +175,8 @@
 		1995CD5621A33AF1006774F0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				19DDA6BF21A35F9E00E37750 /* Categaries */,
+				19DDA6BF21A35F9E00E37750 /* Categories */,
+				C6FCEFBC21F49270008FC0A1 /* Drinks */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -163,7 +184,8 @@
 		1995CD5F21A33E49006774F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				19DDA6C021A35FAE00E37750 /* Categaries */,
+				19DDA6C021A35FAE00E37750 /* Categories */,
+				C6FCEFB721F490CC008FC0A1 /* Drinks */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -174,6 +196,7 @@
 				19DDA6B921A34AB000E37750 /* CTAPI.swift */,
 				19DDA6BB21A34B5C00E37750 /* CTAPICocktail.swift */,
 				19DDA6C121A35FD400E37750 /* Categories */,
+				C6FCEFC121F497B1008FC0A1 /* Drinks */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -186,22 +209,22 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		19DDA6BF21A35F9E00E37750 /* Categaries */ = {
+		19DDA6BF21A35F9E00E37750 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
 				1995CD5221A33AEB006774F0 /* CTCocktailCategoriesViewController.swift */,
 				1995CD5321A33AEB006774F0 /* CTCocktailCategoriesViewController.xib */,
 			);
-			path = Categaries;
+			path = Categories;
 			sourceTree = "<group>";
 		};
-		19DDA6C021A35FAE00E37750 /* Categaries */ = {
+		19DDA6C021A35FAE00E37750 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
 				1995CD5B21A33E20006774F0 /* CTCocktailCategoriesView.swift */,
 				1995CD5D21A33E3D006774F0 /* CTCocktailCategoriesView.xib */,
 			);
-			path = Categaries;
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		19DDA6C121A35FD400E37750 /* Categories */ = {
@@ -265,6 +288,37 @@
 				C6FCEFB321F47992008FC0A1 /* LocalDataSourceProtocol.swift */,
 			);
 			path = Abstraction;
+			sourceTree = "<group>";
+		};
+		C6FCEFB721F490CC008FC0A1 /* Drinks */ = {
+			isa = PBXGroup;
+			children = (
+				C6FCEFBA21F49162008FC0A1 /* CTDrinksView.swift */,
+				C6FCEFB821F4914F008FC0A1 /* CTDrinksView.xib */,
+				C69BE13121F4CD9D00638821 /* CTDrinkTableViewCell.swift */,
+				C69BE13221F4CD9D00638821 /* CTDrinkTableViewCell.xib */,
+			);
+			path = Drinks;
+			sourceTree = "<group>";
+		};
+		C6FCEFBC21F49270008FC0A1 /* Drinks */ = {
+			isa = PBXGroup;
+			children = (
+				C6FCEFBF21F492A9008FC0A1 /* CTDrinksViewController.swift */,
+				C69BE12D21F4CAA000638821 /* CTDrinksViewController.xib */,
+			);
+			path = Drinks;
+			sourceTree = "<group>";
+		};
+		C6FCEFC121F497B1008FC0A1 /* Drinks */ = {
+			isa = PBXGroup;
+			children = (
+				C6FCEFCA21F49B81008FC0A1 /* CTDrinksList.swift */,
+				C6FCEFC421F49851008FC0A1 /* CTDrinkCategory.swift */,
+				C6FCEFC821F49A24008FC0A1 /* CTDrink.swift */,
+				C6FCEFC221F497E3008FC0A1 /* CTDrinksModel.swift */,
+			);
+			path = Drinks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,9 +427,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C69BE12E21F4CAA000638821 /* CTDrinksViewController.xib in Resources */,
 				1995CD2C21A33928006774F0 /* Assets.xcassets in Resources */,
 				1995CD5521A33AEB006774F0 /* CTCocktailCategoriesViewController.xib in Resources */,
+				C6FCEFB921F4914F008FC0A1 /* CTDrinksView.xib in Resources */,
 				1995CD5E21A33E3D006774F0 /* CTCocktailCategoriesView.xib in Resources */,
+				C69BE13421F4CD9D00638821 /* CTDrinkTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,12 +462,14 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-CocktailTest/Pods-CocktailTest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Unbox/Unbox.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Unbox.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,14 +504,21 @@
 			files = (
 				1995CD2521A33927006774F0 /* AppDelegate.swift in Sources */,
 				19DDA6BE21A34EFB00E37750 /* CTCocktailCategoriesModel.swift in Sources */,
+				C6FCEFCB21F49B81008FC0A1 /* CTDrinksList.swift in Sources */,
+				C69BE13321F4CD9D00638821 /* CTDrinkTableViewCell.swift in Sources */,
 				19DDA6BC21A34B5C00E37750 /* CTAPICocktail.swift in Sources */,
+				C6FCEFC321F497E3008FC0A1 /* CTDrinksModel.swift in Sources */,
 				1995CD5421A33AEB006774F0 /* CTCocktailCategoriesViewController.swift in Sources */,
+				C6FCEFBB21F49162008FC0A1 /* CTDrinksView.swift in Sources */,
 				C6FCEFB421F47992008FC0A1 /* LocalDataSourceProtocol.swift in Sources */,
+				C6FCEFC921F49A24008FC0A1 /* CTDrink.swift in Sources */,
 				C6FCEFAD21F474AE008FC0A1 /* Drink.xcdatamodeld in Sources */,
 				1995CD6121A341B9006774F0 /* CTCocktailCategory.swift in Sources */,
 				19DDA6BA21A34AB000E37750 /* CTAPI.swift in Sources */,
 				19DDA6B521A3469E00E37750 /* CTCategoriesList.swift in Sources */,
+				C6FCEFC021F492A9008FC0A1 /* CTDrinksViewController.swift in Sources */,
 				C6FCEFB121F47733008FC0A1 /* LocalDataSource.swift in Sources */,
+				C6FCEFC521F49851008FC0A1 /* CTDrinkCategory.swift in Sources */,
 				19DDA6B721A34A0B00E37750 /* CTConstants.swift in Sources */,
 				1995CD5C21A33E20006774F0 /* CTCocktailCategoriesView.swift in Sources */,
 			);

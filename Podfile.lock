@@ -2,24 +2,28 @@ PODS:
   - Alamofire (4.5.1)
   - AlamofireImage (3.3.0):
     - Alamofire (~> 4.5)
+  - Kingfisher (5.1.0)
   - Unbox (2.5.0)
 
 DEPENDENCIES:
   - Alamofire (= 4.5.1)
   - AlamofireImage (= 3.3.0)
+  - Kingfisher
   - Unbox (= 2.5.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireImage
+    - Kingfisher
     - Unbox
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
+  Kingfisher: fcec238063d17404fca89bf0a850583211c4cbf6
   Unbox: 30e437e6151a6de16139375fd4e8dd9a664cfbf7
 
-PODFILE CHECKSUM: fbefb44e0c11a3c0bd0eaa6f0c41ffe966bc4ecf
+PODFILE CHECKSUM: 33e2a1be9f737b74e6e2578acb33bd7ad4eb5a9a
 
 COCOAPODS: 1.5.3
