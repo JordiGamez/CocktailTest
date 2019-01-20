@@ -3,12 +3,16 @@ PODS:
   - AlamofireImage (3.3.0):
     - Alamofire (~> 4.5)
   - Kingfisher (5.1.0)
+  - Nimble (7.3.2)
+  - Quick (1.3.2)
   - Unbox (2.5.0)
 
 DEPENDENCIES:
   - Alamofire (= 4.5.1)
   - AlamofireImage (= 3.3.0)
   - Kingfisher
+  - Nimble
+  - Quick
   - Unbox (= 2.5.0)
 
 SPEC REPOS:
@@ -16,14 +20,18 @@ SPEC REPOS:
     - Alamofire
     - AlamofireImage
     - Kingfisher
+    - Nimble
+    - Quick
     - Unbox
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
   Kingfisher: fcec238063d17404fca89bf0a850583211c4cbf6
+  Nimble: 5e94a8cacb355943c6c87198035dc4adbb0f10e4
+  Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
   Unbox: 30e437e6151a6de16139375fd4e8dd9a664cfbf7
 
-PODFILE CHECKSUM: 33e2a1be9f737b74e6e2578acb33bd7ad4eb5a9a
+PODFILE CHECKSUM: c37c8b6e4987f1533aa59ea7b8ef300327c040b7
 
 COCOAPODS: 1.5.3

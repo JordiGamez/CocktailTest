@@ -7,3 +7,8 @@ target 'CocktailTest' do
     pod 'Unbox', '2.5.0'
     pod 'Kingfisher'
 end
+
+target 'CocktailTestTests' do
+    pod 'Quick'
+    pod 'Nimble'
+end
